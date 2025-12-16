@@ -186,13 +186,13 @@ When long-term effects are considered, the preferred variant may change due to r
 
 \### DAU Trend (Base Scenario, Day 0–30)
 
-!\[DAU Trend](images/base\_dau\_0\_30.png)
+![DAU Trend](./images/base_dau_0_30.png)
 
 
 
 \### Daily Revenue Trend (Base Scenario, Day 0–30)
 
-!\[Daily Revenue Trend](images/base\_revenue\_0\_30.png)
+![Daily Revenue Trend](./images/base_revenue_0_30.png)
 
 
 
@@ -301,6 +301,7 @@ All assumptions are applied equally to ensure a fair comparison.
 This analysis demonstrates how limited aggregate metrics can be transformed into a structured simulation to support \*\*data-informed product decisions\*\*.  
 
 By combining retention modeling, cohort-based DAU simulation, and monetization logic, the task highlights the importance of long-term thinking when evaluating A/B test results.
+
 
 
 
