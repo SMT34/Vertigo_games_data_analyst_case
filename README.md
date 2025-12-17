@@ -305,7 +305,7 @@ By combining retention modeling, cohort-based DAU simulation, and monetization l
 
 
 
-# Task 2 — Exploratory Data Analysis & User Segmentation
+## Task 2 — Exploratory Data Analysis & User Segmentation
 
 This notebook focuses on exploratory data analysis of user behavior and monetization using the provided event-level dataset.
 
@@ -313,7 +313,7 @@ The goal of this task is to understand how user engagement and revenue evolve ov
 
 ---
 
-## Dataset Overview
+### Dataset Overview
 
 The dataset consists of multiple compressed CSV files (`.csv.gz`) containing daily user-level metrics, including:
 
@@ -327,7 +327,7 @@ All files share the same schema and are combined into a single dataset for analy
 
 ---
 
-## Analysis Approach
+### Analysis Approach
 
 The analysis follows a structured and transparent workflow:
 
@@ -358,7 +358,7 @@ The analysis follows a structured and transparent workflow:
 
 ---
 
-## Key Insights
+### Key Insights
 
 - User engagement increases steadily as users progress through lifecycle stages, with long-term users spending significantly more time per session.
 - In-app purchase revenue peaks in mid-to-late lifecycle stages (D8–D90), indicating higher spending propensity among engaged users.
@@ -367,16 +367,17 @@ The analysis follows a structured and transparent workflow:
 
 ---
 
-## Files in This Repository
+### Files in This Repository
 
 - `task2_eda.ipynb` — Jupyter Notebook containing the full analysis
 - `README.md` — Overview of the analysis and key findings
 
 ---
 
-## Notes
+### Notes
 
 This analysis is exploratory in nature and aims to demonstrate analytical thinking, data handling, and insight generation rather than model optimization.
+
 
 
 
