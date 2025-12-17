@@ -305,3 +305,76 @@ By combining retention modeling, cohort-based DAU simulation, and monetization l
 
 
 
+# Task 2 — Exploratory Data Analysis & User Segmentation
+
+This notebook focuses on exploratory data analysis of user behavior and monetization using the provided event-level dataset.
+
+The goal of this task is to understand how user engagement and revenue evolve over the user lifecycle and to extract meaningful insights that could inform product and monetization strategies.
+
+---
+
+## Dataset Overview
+
+The dataset consists of multiple compressed CSV files (`.csv.gz`) containing daily user-level metrics, including:
+
+- Installation and event dates
+- Platform and country information
+- Session activity and match outcomes
+- In-app purchase (IAP) revenue
+- Ad revenue
+
+All files share the same schema and are combined into a single dataset for analysis.
+
+---
+
+## Analysis Approach
+
+The analysis follows a structured and transparent workflow:
+
+1. **Data Loading**
+   - All `.csv.gz` files are dynamically loaded and merged into a single DataFrame.
+
+2. **Data Validation & Cleaning**
+   - Invalid lifecycle records (events occurring before install) are removed.
+   - Infinite values caused by division operations are handled.
+   - Missing categorical values (e.g., country) are labeled as "Unknown".
+
+3. **Feature Engineering**
+   - Days since install
+   - Average session duration per session
+   - Match win rate
+
+4. **Lifecycle Segmentation**
+   - Users are segmented based on time since installation:
+     - D0–D1
+     - D2–D7
+     - D8–D30
+     - D31–D90
+     - D90+
+
+5. **Aggregation & Visualization**
+   - Engagement and monetization metrics are aggregated by lifecycle segment.
+   - Visualizations highlight trends in session duration and revenue.
+
+---
+
+## Key Insights
+
+- User engagement increases steadily as users progress through lifecycle stages, with long-term users spending significantly more time per session.
+- In-app purchase revenue peaks in mid-to-late lifecycle stages (D8–D90), indicating higher spending propensity among engaged users.
+- Ad revenue remains relatively stable but slightly declines for long-term users, suggesting a shift toward IAP-driven monetization.
+- Win rate decreases over time, which may indicate increasing game difficulty or matchmaking adjustments for experienced users.
+
+---
+
+## Files in This Repository
+
+- `task2_eda.ipynb` — Jupyter Notebook containing the full analysis
+- `README.md` — Overview of the analysis and key findings
+
+---
+
+## Notes
+
+This analysis is exploratory in nature and aims to demonstrate analytical thinking, data handling, and insight generation rather than model optimization.
+
