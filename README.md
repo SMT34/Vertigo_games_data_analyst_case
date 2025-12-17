@@ -1,4 +1,4 @@
-\# Vertigo Games – Data Analyst Case  
+\### Vertigo Games – Data Analyst Case  
 
 \## Task 1: A/B Test Modeling \& Simulation
 
@@ -377,4 +377,5 @@ The analysis follows a structured and transparent workflow:
 ## Notes
 
 This analysis is exploratory in nature and aims to demonstrate analytical thinking, data handling, and insight generation rather than model optimization.
+
 
