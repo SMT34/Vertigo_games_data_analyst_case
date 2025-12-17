@@ -1,10 +1,10 @@
-\# Vertigo Games – Data Analyst Case  
+# Vertigo Games – Data Analyst Case  
 
-\## Task 1: A/B Test Modeling \& Simulation
+## Task 1: A/B Test Modeling \& Simulation
 
 
 
-\### Overview
+### Overview
 
 This repository contains the solution for \*\*Task 1\*\* of the Vertigo Games Data Analyst case study.  
 
@@ -20,7 +20,7 @@ The analysis focuses on \*\*user retention, daily active users (DAU), and revenu
 
 
 
-\## Problem Description
+## Problem Description
 
 
 
@@ -30,13 +30,13 @@ The following metrics are provided for both variants:
 
 
 
-\- Daily Purchase Ratio  
+- Daily Purchase Ratio  
 
-\- eCPM  
+- eCPM  
 
-\- Ad Impressions per DAU  
+- Ad Impressions per DAU  
 
-\- Retention at D1, D3, D7, and D14  
+- Retention at D1, D3, D7, and D14  
 
 
 
@@ -48,21 +48,21 @@ Using these inputs, the task evaluates short-term and long-term performance unde
 
 
 
-\## Methodology
+## Methodology
 
 
 
-\### Retention Modeling
+### Retention Modeling
 
 Retention is modeled at a \*\*daily level\*\* by linearly interpolating between the given checkpoints (D1, D3, D7, D14).
 
 
 
-\- Retention on Day 0 is assumed to be 100%
+- Retention on Day 0 is assumed to be 100%
 
-\- Retention after Day 14 is extrapolated using the last observed decay trend
+- Retention after Day 14 is extrapolated using the last observed decay trend
 
-\- All retention values are bounded between 0 and 1
+- All retention values are bounded between 0 and 1
 
 
 
@@ -74,17 +74,17 @@ This approach produces a smooth and interpretable retention curve suitable for s
 
 
 
-\### DAU Simulation
+### DAU Simulation
 
 Daily Active Users are calculated using a \*\*cohort-based approach\*\*:
 
 
 
-\- A new cohort of users is added each day
+- A new cohort of users is added each day
 
-\- Each cohort contributes to DAU based on its age-specific retention
+- Each cohort contributes to DAU based on its age-specific retention
 
-\- DAU is the sum of all active cohorts on a given day
+- DAU is the sum of all active cohorts on a given day
 
 
 
@@ -96,7 +96,7 @@ This method reflects how DAU evolves in real-world free-to-play games.
 
 
 
-\### Monetization Modeling
+### Monetization Modeling
 
 
 
@@ -104,19 +104,19 @@ Two revenue streams are considered:
 
 
 
-\#### In-App Purchases (IAP)
+#### In-App Purchases (IAP)
 
-\- Daily buyers are estimated using the daily purchase ratio
+- Daily buyers are estimated using the daily purchase ratio
 
-\- ARPPU is assumed to be constant (set to 1.0) since the analysis focuses on \*\*relative comparison\*\*, not absolute revenue
+- ARPPU is assumed to be constant (set to 1.0) since the analysis focuses on \*\*relative comparison\*\*, not absolute revenue
 
 
 
-\#### Advertising Revenue
+#### Advertising Revenue
 
-\- Ad impressions are derived from DAU and impressions per DAU
+- Ad impressions are derived from DAU and impressions per DAU
 
-\- Revenue is calculated using the provided eCPM values
+- Revenue is calculated using the provided eCPM values
 
 
 
@@ -128,11 +128,11 @@ Total daily revenue is the sum of IAP and advertising revenue.
 
 
 
-\## Scenarios \& Results
+## Scenarios \& Results
 
 
 
-\### (a) DAU After 15 Days
+### (a) DAU After 15 Days
 
 The DAU values of both variants are compared on Day 15.
 
@@ -148,7 +148,7 @@ The variant with stronger early retention maintains a higher DAU after 15 days.
 
 
 
-\### (b) Total Revenue by Day 15
+### (b) Total Revenue by Day 15
 
 Cumulative revenue is calculated from Day 0 to Day 15.
 
@@ -164,7 +164,7 @@ Short-term monetization favors the variant with higher purchase efficiency and a
 
 
 
-\### (c) Total Revenue by Day 30
+### (c) Total Revenue by Day 30
 
 The same analysis is extended to a 30-day horizon.
 
@@ -180,17 +180,17 @@ When long-term effects are considered, the preferred variant may change due to r
 
 
 
-\## Key Visuals
+## Key Visuals
 
 
 
-\### DAU Trend (Base Scenario, Day 0–30)
+### DAU Trend (Base Scenario, Day 0–30)
 
 ![DAU Trend](./images/base_dau_0_30.png)
 
 
 
-\### Daily Revenue Trend (Base Scenario, Day 0–30)
+### Daily Revenue Trend (Base Scenario, Day 0–30)
 
 ![Daily Revenue Trend](./images/base_revenue_0_30.png)
 
@@ -200,7 +200,7 @@ When long-term effects are considered, the preferred variant may change due to r
 
 
 
-\### (d) Temporary Sale (Day 15–24)
+### (d) Temporary Sale (Day 15–24)
 
 A 10-day sale is simulated by increasing the purchase rate by \*\*+1%\*\* during the campaign period.
 
@@ -216,13 +216,13 @@ The sale produces a noticeable short-term revenue uplift, but its impact does no
 
 
 
-\### (e) New User Source Added on Day 20
+### (e) New User Source Added on Day 20
 
 From Day 20 onward:
 
-\- 12,000 users arrive from the original source
+- 12,000 users arrive from the original source
 
-\- 8,000 users arrive from a new source with different retention dynamics
+- 8,000 users arrive from a new source with different retention dynamics
 
 
 
@@ -240,7 +240,7 @@ Adding a permanent user source increases DAU sustainably and compounds revenue o
 
 
 
-\### (f) Prioritization Decision
+### (f) Prioritization Decision
 
 If only one improvement could be prioritized, adding the \*\*new, permanent user source\*\* would be the preferred option.
 
@@ -256,17 +256,17 @@ In contrast, the permanent user source strengthens the core growth loop by conti
 
 
 
-\## Key Assumptions
+## Key Assumptions
 
 
 
-\- Install volume is constant unless explicitly stated otherwise
+- Install volume is constant unless explicitly stated otherwise
 
-\- ARPPU is fixed across variants
+- ARPPU is fixed across variants
 
-\- Retention behavior is consistent within each acquisition source
+- Retention behavior is consistent within each acquisition source
 
-\- No interaction effects between retention and monetization are assumed
+- No interaction effects between retention and monetization are assumed
 
 
 
@@ -278,15 +278,15 @@ All assumptions are applied equally to ensure a fair comparison.
 
 
 
-\## Files Included
+## Files Included
 
 
 
-\- `task1\_simulation.ipynb` – Full simulation and analysis  
+- `task1\_simulation.ipynb` – Full simulation and analysis  
 
-\- `README.md` – Summary of methodology, assumptions, and results  
+- `README.md` – Summary of methodology, assumptions, and results  
 
-\- `images/` – Screenshots of key visualizations  
+- `images/` – Screenshots of key visualizations  
 
 
 
@@ -294,7 +294,7 @@ All assumptions are applied equally to ensure a fair comparison.
 
 
 
-\## Conclusion
+## Conclusion
 
 
 
@@ -377,6 +377,7 @@ The analysis follows a structured and transparent workflow:
 ### Notes
 
 This analysis is exploratory in nature and aims to demonstrate analytical thinking, data handling, and insight generation rather than model optimization.
+
 
 
 
