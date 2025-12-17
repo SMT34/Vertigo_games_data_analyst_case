@@ -303,7 +303,7 @@ This analysis demonstrates how limited aggregate metrics can be transformed into
 By combining retention modeling, cohort-based DAU simulation, and monetization logic, the task highlights the importance of long-term thinking when evaluating A/B test results.
 
 
-
+---
 
 ## Task 2 — Exploratory Data Analysis & User Segmentation
 
@@ -377,6 +377,7 @@ The analysis follows a structured and transparent workflow:
 ### Notes
 
 This analysis is exploratory in nature and aims to demonstrate analytical thinking, data handling, and insight generation rather than model optimization.
+
 
 
 
